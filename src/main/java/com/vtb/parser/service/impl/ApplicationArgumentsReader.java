@@ -62,7 +62,7 @@ public class ApplicationArgumentsReader implements CommandLineRunner {
         try {
             parseFileMap.get(fileType).process(operationType.get(), file);
         } catch (Exception e) {
-            logger.info("Unknown error during operation", e);
+            logger.info("Unknown error during operation", e.getCause());
             serviceUtil.sendExitCode("Unknown error during operation, see application log to get more information");
         }
     }

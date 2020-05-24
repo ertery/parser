@@ -30,13 +30,6 @@ public class DataSourceConfig {
     @Bean
     @Primary
     public DataSource dataSource() {
-    /*    return DataSourceBuilder
-                .create()
-                .username(username)
-                .password(password)
-                .url(postgresUrl)
-                .build();*/
-
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl(postgresUrl);
         dataSource.setUsername(username);

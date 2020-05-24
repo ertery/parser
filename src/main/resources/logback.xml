@@ -42,6 +42,10 @@
         <appender-ref ref="STDOUT_INFO"/>
     </logger>
 
+    <logger name="com.vtb.parser" level="INFO" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
     <root level="INFO">
         <appender-ref ref="FILE"/>
     </root>

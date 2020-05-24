@@ -23,7 +23,7 @@
   
       1. JSON. Представляет из себя список объектов. Пример файла показан ниже:
       
-        `{
+         {
            "departments": [
              {
                "code": "_code_string_",
@@ -32,11 +32,11 @@
              },
              ...
            ]
-         }`
+         }
          
       2. XML.
       
-        `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
          <departments>
              <department>
                  <code>_code_string_</code>
@@ -48,7 +48,7 @@
                  <job>__job1_string__</job>
                  <description>_description1_string_</description>
              </department>
-         </departments>` 
+         </departments>
          
 **3. Возможные операции** 
      

@@ -5,6 +5,7 @@
 .project
 .classpath
 bin
+log
 .springBeans
 /.metadata/
 .factorypath

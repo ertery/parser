@@ -1,0 +1,19 @@
+{
+  "departments": [
+    {
+      "code": "11113",
+      "job": "Job2334567",
+      "description": "2323423"
+    },
+    {
+      "code": "11113",
+      "job": "Job245345",
+      "description": "2323423"
+    },
+    {
+      "code": "11113",
+      "job": "Job245345",
+      "description": "2323423"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="departments">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="department"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="department">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="code"/>
+                <xs:element ref="job"/>
+                <xs:element ref="description"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="code" type="xs:string"/>
+    <xs:element name="job" type="xs:string"/>
+    <xs:element name="description" type="xs:string"/>
+</xs:schema>

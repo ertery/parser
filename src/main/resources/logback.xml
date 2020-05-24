@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <jmxConfigurator/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property resource="application.properties"/>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${parser.logging.path}/${parser.logging.name}</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%thread] [%c] [%X] - %m%n %ex</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%thread] [%c] [%X] - %m%n %ex</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <appender name="STDOUT_INFO" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %m%n %ex</pattern>
+        </encoder>
+        <filter class="com.vtb.parser.filter.CustomLoggingFilter">
+            <level>ERROR</level>
+            <loggerName>ImportantInfoMessages</loggerName>
+        </filter>
+    </appender>
+
+    <logger name="com.vtb.parser" level="ERROR" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger name="ImportantInfoMessages" level="INFO">
+        <appender-ref ref="STDOUT_INFO"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

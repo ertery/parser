@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<departments>
+    <department>
+        <code>Code1</code>
+        <job>Job1</job>
+        <description>XMLDescription1</description>
+    </department>
+    <department>
+        <code>Code2</code>
+        <job>Job2</job>
+        <description>XMLDescription2</description>
+    </department>
+    <department>
+        <code>Code3</code>
+        <job>Job3</job>
+        <description>XMLDescription3</description>
+    </department>
+    <department>
+        <code>Code4</code>
+        <job>Job4</job>
+        <description>XMLDescription4</description>
+    </department>
+</departments>

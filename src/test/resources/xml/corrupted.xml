@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<departments>
+    <department>
+        <code>11113</code>
+        <job>Job345</job>
+        <description>2323423</description>
+    </department>
+    <department>
+        <code>11113</code>
+        <job>Job24</job>
+        <description>2323423</description>
+    <department>
+        <code>11113</code>
+        <description>2323423</description>
+    </department>
+</departments>

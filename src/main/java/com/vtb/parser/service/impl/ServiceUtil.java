@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServiceUtil {
 
-    private static final Logger logger = LoggerFactory.getLogger(ServiceUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger("ImportantInfoMessages");
 
     public void sendExitCode(String errorLog, Object... args) {
-        logger.error(errorLog, args);
+        logger.info(errorLog, args);
         System.exit(1);
     }
 

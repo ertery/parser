@@ -121,7 +121,7 @@ public class XmlFileParserImpl implements FileParser {
         try {
             return Optional.ofNullable((XMLDepartments) unmarshaller.unmarshal(file));
         } catch (JAXBException e) {
-            logger.info("XML Parsing exception", e);
+            logger.error("XML Parsing exception", e);
             serviceUtil.sendExitCode("XML Parsing exception, see more information in log file");
         }
 

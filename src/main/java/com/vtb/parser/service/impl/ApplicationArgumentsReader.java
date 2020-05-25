@@ -62,7 +62,7 @@ public class ApplicationArgumentsReader implements CommandLineRunner {
         try {
             parseFileMap.get(fileType).process(operationType.get(), file);
         } catch (Exception e) {
-            logger.info("Unknown error during operation", e.getCause());
+            logger.error("Unknown error during operation", e.getCause());
             serviceUtil.sendExitCode("Unknown error during operation, see application log to get more information");
         }
     }
@@ -73,7 +73,7 @@ public class ApplicationArgumentsReader implements CommandLineRunner {
                 logger.info("File with path {} was created for load operation", file.getAbsolutePath());
             }
         } catch (IOException e) {
-            logger.info("", e);
+            logger.error("", e);
             serviceUtil.sendExitCode("Error during file creation, see application log to get more information");
         }
     }
